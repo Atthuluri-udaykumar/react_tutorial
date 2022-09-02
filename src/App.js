@@ -6,6 +6,7 @@ import Footer from './Footer'
 
 import './App.css';
 import Card from './Card';
+import Forms from './Forms';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -80,7 +81,7 @@ function App() {
 
   const onFormUpdate = () => {
     let data = cardData;
-    data.splice(slectedIndex, 1,{title:userName})
+    data.splice(slectedIndex, 1, { title: userName })
     setCardData(data);
     setslectedIndex(null);
     setuserName('')
@@ -94,16 +95,19 @@ function App() {
 
       <div className='main_sec'>
 
-        <form>
+        {/* <form>
           <input type='text' placeholder='user name' value={userName} onChange={e => setuserName(e.target.value)} />
         </form>
         {
-          slectedIndex !==null ? <button onClick={onFormUpdate}>update</button> :
+          slectedIndex !== null ? <button onClick={onFormUpdate}>update</button> :
 
             <button onClick={onFormSubmit}>Submit</button>
-        }
+        } */}
 
 
+        <Forms/>
+
+{/* 
         {
           cardData.map((val, i) => (
             <Card
@@ -114,7 +118,7 @@ function App() {
             />
 
           ))
-        }
+        } */}
 
       </div>
 
@@ -148,3 +152,22 @@ export default App;
 // 7)useRef
 
 //class componets --> 
+
+
+
+// component :-- is the block of code 
+
+// two types of:-
+// 1)function componet
+// 2) class component
+
+
+// in latest function component
+
+// 1) states and props 
+
+// 1)useState :-- is used to define the states
+
+// to communucate one to another or to transfeert the state 
+
+// context or redux :-global state management tools 
